@@ -74,6 +74,10 @@ button {
     margin-block: clamp(1.5rem, 0.167rem + 6.667vw, 2rem);
 }
 
+.rating-selection[data-invalid] .rating {
+    border: 1px solid var(--orange-500);
+}
+
 .rating {
     position: relative;
     inline-size: clamp(2.265rem, 0.305rem + 9.8vw, 3rem);
@@ -131,7 +135,8 @@ input[type="radio"] {
     width: max-content;
     margin-inline: auto;
     border-radius: 20px;
-    padding: .5em 1em;
+    padding-inline: 1em;
+    padding-block: .5em .25em;
 }
 
 .thank-you__header,
