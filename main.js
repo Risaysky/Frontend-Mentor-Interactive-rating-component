@@ -4,6 +4,7 @@ const thanksCard = document.querySelector(".thank-you");
 const ratingSelection = document.querySelector(".rating-selection");
 const radioBtns = ratingSelection.children;
 const ratingAnnouncement = document.querySelector(".rating-announcement");
+let timeouts = [];
 
 submitBtn.addEventListener("click", validateRating);
 
@@ -16,10 +17,12 @@ function validateRating() {
             return;
         }
     }
-    ratingSelection.toggleAttribute("data-invalid")
-    setTimeout(() => ratingSelection.toggleAttribute("data-invalid"), 500);
-    setTimeout(() => ratingSelection.toggleAttribute("data-invalid"), 900);
-    setTimeout(() => ratingSelection.toggleAttribute("data-invalid"), 1400);
+    timeouts.forEach(id => clearTimeout(id));
+    timeouts = [];
+    ratingSelection.setAttribute("data-invalid", "");
+    timeouts.push(setTimeout(() => ratingSelection.toggleAttribute("data-invalid"), 500))
+    timeouts.push(setTimeout(() => ratingSelection.toggleAttribute("data-invalid"), 900))
+    timeouts.push(setTimeout(() => ratingSelection.toggleAttribute("data-invalid"), 1400))
 }
 
 function showNextCard(rating) {
