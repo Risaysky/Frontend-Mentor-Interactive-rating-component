@@ -75,12 +75,24 @@ button {
 }
 
 .rating {
+    position: relative;
     inline-size: clamp(2.265rem, 0.305rem + 9.8vw, 3rem);
     block-size: clamp(2.265rem, 0.305rem + 9.8vw, 3rem);
     color: var(--grey-500);
     border-radius: 50%;
     background-color: var(--grey-700);
     font-weight: 700;
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"] {
+    appearance: none;
+}
+
+.rating:has(input:checked) {
+    background-color: var(--orange-500);
+    color: var(--grey-950);
 }
 
 .submit-btn {
