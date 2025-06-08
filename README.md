@@ -8,8 +8,8 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ## Links
 
-- [Solution page]()
-- [Live site]()
+- [Solution page](https://www.frontendmentor.io/solutions/vanilla-interactive-rating-component-Y6NuzahOE6)
+- [Live site](https://www.frontendmentor.io/solutions/vanilla-interactive-rating-component-Y6NuzahOE6)
 
 ## Built with
 
