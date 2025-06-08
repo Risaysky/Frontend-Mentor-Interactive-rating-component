@@ -19,7 +19,7 @@ body {
     align-items: center;
     block-size: 100vh;
     background-color: var(--grey-950);
-    font-family: "Overpass";
+    font-family: "Overpass", sans-serif;
 }
 
 .flex {
@@ -74,8 +74,8 @@ button {
     margin-block: clamp(1.5rem, 0.167rem + 6.667vw, 2rem);
 }
 
-.rating-selection[data-invalid] .rating {
-    border: 1px solid var(--orange-500);
+input[type="radio"] {
+    appearance: none;
 }
 
 .rating {
@@ -90,8 +90,8 @@ button {
     place-content: center;
 }
 
-input[type="radio"] {
-    appearance: none;
+.rating-selection[data-invalid] .rating {
+    border: 1px solid var(--orange-500);
 }
 
 .rating:has(input:checked) {
