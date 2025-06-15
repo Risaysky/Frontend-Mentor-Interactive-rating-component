@@ -17,7 +17,7 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
-    block-size: 100vh;
+    min-block-size: 100vh;
     background-color: var(--grey-950);
     font-family: "Overpass", sans-serif;
 }
